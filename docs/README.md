@@ -1,1 +1,0 @@
-# Cookiecutter Modern Data Science
