@@ -11,7 +11,7 @@
 * Batteries included: [Pandas], [numpy], [scipy], and [jupyter] already installed.
 * Consistent code quality: [black], [isort], [autoflake], and [pylint] already installed and set up as a git hook.
 * [Pytest] for testing.
-* [Sphinx] docs: Documentation ready for generation with, for example, [Read the Docs].
+* [GitHub Pages] for documentation.
 * [Git LFS] for large files.
 
 ## Quickstart
@@ -101,4 +101,5 @@ This is our your new project will look like:
 [autoflake]: https://github.com/myint/autoflake
 [pylint]: https://www.pylint.org/
 [Pytest]: https://docs.pytest.org/en/latest/
+[GitHub Pages]: https://pages.github.com/
 [Git LFS]: https://git-lfs.github.com/
