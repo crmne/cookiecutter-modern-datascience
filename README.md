@@ -8,7 +8,7 @@
 * [Weights and Biases] for experiment tracking.
 * [FastAPI] for self-documenting fast HTTP APIs - on par with NodeJS and Go - based on [asyncio], [ASGI], and [uvicorn].
 * Modern CLI with [Typer].
-* Batteries included: [Pandas], [numpy], [scipy], and [jupyter] already installed.
+* Batteries included: [Pandas], [numpy], [scipy], [seaborn], and [jupyterlab] already installed.
 * Consistent code quality: [black], [isort], [autoflake], and [pylint] already installed and set up as a git hook.
 * [Pytest] for testing.
 * [GitHub Pages] for documentation.
@@ -18,7 +18,7 @@
 
 Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher)::
 
-    pip install -U cookiecutter
+    pip install -U pipenv cookiecutter
 
 Generate a Python package project::
 
@@ -28,59 +28,58 @@ Generate a Python package project::
 
 This is our your new project will look like:
 
-    ├── LICENSE                 <- Your project's license.
-    ├── README.md               <- The top-level README for developers using this project.
+    ├── LICENSE                   <- Your project's license.
+    ├── README.md                 <- The top-level README for developers using this project.
     ├── data
-    │   ├── 0_raw               <- The original, immutable data dump.
-    │   ├── 0_external          <- Data from third party sources.
-    │   ├── 1_interim           <- Intermediate data that has been transformed.
-    │   └── 2_final             <- The final, canonical data sets for modeling.
+    │   ├── 0_raw                 <- The original, immutable data dump.
+    │   ├── 0_external            <- Data from third party sources.
+    │   ├── 1_interim             <- Intermediate data that has been transformed.
+    │   └── 2_final               <- The final, canonical data sets for modeling.
     │
     ├── output
-    │   ├── features            <- Fitted and serialized features, model predictions, or model summaries
-    │   ├── models              <- Trained and serialized models, model predictions, or model summaries
-    │   └── reports             <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │       └── figures         <- Generated graphics and figures to be used in reporting
+    │   ├── features              <- Fitted and serialized features
+    │   ├── models                <- Trained and serialized models, model predictions, or model summaries
+    │   └── reports               <- Generated analyses as HTML, PDF, LaTeX, etc.
+    │       └── figures           <- Generated graphics and figures to be used in reporting
     │
-    ├── docs                    <- GitHub pages website
-    │   ├── data_dicts          <- Data dictionaries
-    │   └── references          <- Papers, manuals, and all other explanatory materials.
+    ├── docs                      <- GitHub pages website
+    │   ├── data_dictionaries     <- Data dictionaries
+    │   └── references            <- Papers, manuals, and all other explanatory materials.
     │
-    ├── notebooks               <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                              the creator's initials, and a short `_` delimited description, e.g.
-    │                              `01_cp_exploratory_data_analysis`.
+    ├── notebooks                 <- Jupyter notebooks. Naming convention is a number (for ordering),
+    │                                the creator's initials, and a short `_` delimited description, e.g.
+    │                                `01_cp_exploratory_data_analysis.ipynb`.
     │
-    ├── Pipfile                 <- The Pipfile for reproducing the analysis environment
+    ├── Pipfile                   <- The Pipfile for reproducing the analysis environment
     │
-    ├── pipelines               <- Pipelines and data workflows.
-    │   ├── Pipfile             <- The Pipfile for reproducing the pipelines environment
-    │   ├── pipelines.py        <- The CLI entry point for all the pipelines
-    │   ├── test_pipelines.py   <- pytest script for testing pipelines
-    │   ├── lib                 <- Code for the various steps of the pipelines
+    ├── pipelines                 <- Pipelines and data workflows.
+    │   ├── Pipfile               <- The Pipfile for reproducing the pipelines environment
+    │   ├── pipelines.py          <- The CLI entry point for all the pipelines
+    │   ├── <repo_name>           <- Code for the various steps of the pipelines
     │   │   ├──  __init__.py
-    │   │   ├── etl.py          <- Download, generate, and process data
-    │   │   ├── visualize.py    <- Create exploratory and results oriented visualizations
-    │   │   ├── features.py     <- Turn raw data into features for modeling
-    │   │   └── train.py        <- Train and evaluate models
-    │   └── test
-    │       ├── fixtures        <- Where to put example inputs and outputs
-    │       │   ├── input.json  <- Test input data
-    │       │   └── output.json <- Test output data
-    │       └── test_app.py     <- Integration tests for the HTTP API
+    │   │   ├── etl.py            <- Download, generate, and process data
+    │   │   ├── visualize.py      <- Create exploratory and results oriented visualizations
+    │   │   ├── features.py       <- Turn raw data into features for modeling
+    │   │   └── train.py          <- Train and evaluate models
+    │   └── tests
+    │       ├── fixtures          <- Where to put example inputs and outputs
+    │       │   ├── input.json    <- Test input data
+    │       │   └── output.json   <- Test output data
+    │       └── test_pipelines.py <- Integration tests for the HTTP API
     │
-    ├── serve                   <- HTTP API for serving predictions
-    │   ├── Dockerfile          <- Dockerfile for HTTP API
-    │   ├── Pipfile             <- The Pipfile for reproducing the serving environment
-    │   ├── app.py              <- The entry point of the HTTP API
-    │   └── test
-    │       ├── fixtures        <- Where to put example inputs and outputs
-    │       │   ├── input.json  <- Test input data
-    │       │   └── output.json <- Test output data
-    │       └── test_app.py     <- Integration tests for the HTTP API
+    ├── serve                     <- HTTP API for serving predictions
+    │   ├── Dockerfile            <- Dockerfile for HTTP API
+    │   ├── Pipfile               <- The Pipfile for reproducing the serving environment
+    │   ├── app.py                <- The entry point of the HTTP API
+    │   └── tests
+    │       ├── fixtures          <- Where to put example inputs and outputs
+    │       │   ├── input.json    <- Test input data
+    │       │   └── output.json   <- Test output data
+    │       └── test_app.py       <- Integration tests for the HTTP API
     │
-    ├── .env                    <- Variables to be exported in the dev environment e.g. `PORT=8080`
-    ├── .gitignore              <- GitHub's excellent Python .gitignore customized for this project
-    └── .pylintrc               <- Configuration file for pylint
+    ├── .env                      <- Variables to be exported in the dev environment e.g. `PORT=8080`
+    ├── .gitignore                <- GitHub's excellent Python .gitignore customized for this project
+    └── .pylintrc                 <- Configuration file for pylint
 
 
 [Cookiecutter]: https://github.com/audreyr/cookiecutter
@@ -95,7 +94,8 @@ This is our your new project will look like:
 [Pandas]: https://pandas.pydata.org/
 [numpy]: https://numpy.org/
 [scipy]: https://www.scipy.org/
-[jupyter]: https://jupyter.org/
+[seaborn]: https://seaborn.pydata.org/
+[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
 [black]: https://github.com/psf/black
 [isort]: https://github.com/timothycrosley/isort
 [autoflake]: https://github.com/myint/autoflake

@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+isort = "*"
+autoflake = "*"
+pylint = "*"
+
+[packages]
+fastapi = "*"
+
+[requires]
+python_version = "3"
+
+[scripts]
+beautify = "bash -c \"autoflake -i -r --expand-star-imports --remove-all-unused-imports --remove-duplicate-keys --remove-unused-variables *.py; isort *.py; black *.py\""
