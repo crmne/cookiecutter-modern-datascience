@@ -5,7 +5,7 @@
 
 * [Pipenv] for managing packages and virtualenvs in a modern way.
 * [Prefect] for modern pipelines and data workflow.
-* [Weights and Biases] for experiment tracking.
+* [Weights and Biases]/[MLFlow] for experiment tracking.
 * [FastAPI] for self-documenting fast HTTP APIs - on par with NodeJS and Go - based on [asyncio], [ASGI], and [uvicorn].
 * Modern CLI with [Typer].
 * Batteries included: [Pandas], [numpy], [scipy], [seaborn], and [jupyterlab] already installed.
@@ -86,6 +86,7 @@ This is our your new project will look like:
 [Pipenv]: https://pipenv.pypa.io/en/latest/
 [Prefect]: https://docs.prefect.io/
 [Weights and Biases]: https://www.wandb.com/
+[MLFlow]: https://mlflow.org/
 [FastAPI]: https://fastapi.tiangolo.com/
 [asyncio]: https://docs.python.org/3/library/asyncio.html
 [ASGI]: https://asgi.readthedocs.io/en/latest/
