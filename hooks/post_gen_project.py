@@ -12,5 +12,5 @@ os.system("git init")
 os.system("pipenv install --dev")
 os.system(
     "pipenv run ipython kernel install --name "
-    '"py3_{{ cookiecutter.repo_name }})" --user'
+    '"py3_{{ cookiecutter.repo_name }}" --user'
 )
