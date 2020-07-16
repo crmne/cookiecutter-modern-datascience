@@ -8,7 +8,7 @@ PROJECT_DIRECTORY = Path.cwd()
 if "{{ cookiecutter.license }}" == "Not open source":
     (PROJECT_DIRECTORY / "LICENSE").unlink()
 
-if "{{ cookiecutter.setup_project }}" == "Yes":
+if "{{ cookiecutter.setup_project }}" == "Yes - select this":
     os.system("git init")
     os.system("pipenv install --dev")
     os.system(

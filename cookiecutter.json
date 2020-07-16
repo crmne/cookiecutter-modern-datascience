@@ -4,5 +4,5 @@
     "author_name": "Your name (or your organization/company/team)",
     "description": "A short description of the project.",
     "license": ["MIT License", "BSD License", "ISC License", "GNU General Public License v3", "Apache Software License 2.0", "Not open source"],
-    "setup_project": ["Yes", "No"]
+    "setup_project": ["Yes - select this", "No - for testing purposes only"]
 }

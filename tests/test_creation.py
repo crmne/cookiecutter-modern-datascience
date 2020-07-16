@@ -42,7 +42,7 @@ def default_baked_project(tmp_path):
     main.cookiecutter(
         CCDS_ROOT.as_posix(),
         no_input=True,
-        extra_context={"setup_project": "No"},
+        extra_context={"setup_project": "No - for testing purposes only"},
         output_dir=out_dir,
     )
 
