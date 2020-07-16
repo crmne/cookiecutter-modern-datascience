@@ -22,5 +22,5 @@ jupyterlab_code_formatter = "*"
 python_version = "3"
 
 [scripts]
-beautify = "bash -c \"autoflake -i -r --expand-star-imports --remove-all-unused-imports --remove-duplicate-keys --remove-unused-variables *.py; isort *.py; black *.py\""
+beautify = "bash -c \"autoflake -i -r --expand-star-imports --remove-all-unused-imports --remove-duplicate-keys --remove-unused-variables **/*.py; isort **/*.py; black **/*.py\""
 lint = "bash -c \"pylint **/*.py\""
