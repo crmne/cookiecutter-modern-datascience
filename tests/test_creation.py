@@ -81,3 +81,5 @@ def no_curlies(filepath: Path):
     if filepath.is_file():
         template_strings_in_file = [s in filepath.read_text() for s in template_strings]
         return not any(template_strings_in_file)
+
+    return True
