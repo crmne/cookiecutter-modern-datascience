@@ -129,8 +129,8 @@ dmypy.json
 .pyre/
 
 # Binary folders
-/data
-/output
+/data/*/*
+/output/*/*
 !/data/*/README.md
 !/output/*/README.md
 
