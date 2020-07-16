@@ -134,3 +134,5 @@ dmypy.json
 !/data/*/README.md
 !/output/*/README.md
 
+# Weights & Biases
+/wandb
