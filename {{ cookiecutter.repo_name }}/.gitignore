@@ -131,5 +131,5 @@ dmypy.json
 # Binary folders
 /data
 /output
-!*.md
+!README.md
 
