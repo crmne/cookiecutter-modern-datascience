@@ -9,7 +9,7 @@
 * [FastAPI] for self-documenting fast HTTP APIs - on par with NodeJS and Go - based on [asyncio], [ASGI], and [uvicorn].
 * Modern CLI with [Typer].
 * Batteries included: [Pandas], [numpy], [scipy], [seaborn], and [jupyterlab] already installed.
-* Consistent code quality: [black], [isort], [autoflake], and [pylint] already installed and set up as a git hook.
+* Consistent code quality: [black], [isort], [autoflake], and [pylint] already installed.
 * [Pytest] for testing.
 * [GitHub Pages] for the public website.
 
