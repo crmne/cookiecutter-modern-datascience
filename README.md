@@ -19,14 +19,18 @@ Install the latest Cookiecutter and Pipenv:
 
     pip install -U pipenv cookiecutter
 
-Generate the project structure:
+Generate the project:
 
     cookiecutter gh:crmne/cookiecutter-modern-datascience
 
-Initialize working environment:
+Get inside the project:
 
     cd <repo_name>
     pipenv shell  # activates virtualenv
+
+(Optional) Start Weights & Biases locally, if you don't want to use the cloud/on-premise version:
+
+    wandb local
 
 Start working:
 
@@ -36,19 +40,16 @@ Start working:
 
 This is our your new project will look like:
 
+    ├── .gitignore                <- GitHub's excellent Python .gitignore customized for this project
     ├── LICENSE                   <- Your project's license.
+    ├── Pipfile                   <- The Pipfile for reproducing the analysis environment
     ├── README.md                 <- The top-level README for developers using this project.
+    │
     ├── data
     │   ├── 0_raw                 <- The original, immutable data dump.
     │   ├── 0_external            <- Data from third party sources.
     │   ├── 1_interim             <- Intermediate data that has been transformed.
     │   └── 2_final               <- The final, canonical data sets for modeling.
-    │
-    ├── output
-    │   ├── features              <- Fitted and serialized features
-    │   ├── models                <- Trained and serialized models, model predictions, or model summaries
-    │   └── reports               <- Generated analyses as HTML, PDF, LaTeX, etc.
-    │       └── figures           <- Generated graphics and figures to be used in reporting
     │
     ├── docs                      <- GitHub pages website
     │   ├── data_dictionaries     <- Data dictionaries
@@ -58,7 +59,11 @@ This is our your new project will look like:
     │                                the creator's initials, and a short `_` delimited description, e.g.
     │                                `01_cp_exploratory_data_analysis.ipynb`.
     │
-    ├── Pipfile                   <- The Pipfile for reproducing the analysis environment
+    ├── output
+    │   ├── features              <- Fitted and serialized features
+    │   ├── models                <- Trained and serialized models, model predictions, or model summaries
+    │   └── reports               <- Generated analyses as HTML, PDF, LaTeX, etc.
+    │       └── figures           <- Generated graphics and figures to be used in reporting
     │
     ├── pipelines                 <- Pipelines and data workflows.
     │   ├── Pipfile               <- The Pipfile for reproducing the pipelines environment
@@ -75,19 +80,17 @@ This is our your new project will look like:
     │       │   └── output.json   <- Test output data
     │       └── test_pipelines.py <- Integration tests for the HTTP API
     │
-    ├── serve                     <- HTTP API for serving predictions
-    │   ├── Dockerfile            <- Dockerfile for HTTP API
-    │   ├── Pipfile               <- The Pipfile for reproducing the serving environment
-    │   ├── app.py                <- The entry point of the HTTP API
-    │   └── tests
-    │       ├── fixtures          <- Where to put example inputs and outputs
-    │       │   ├── input.json    <- Test input data
-    │       │   └── output.json   <- Test output data
-    │       └── test_app.py       <- Integration tests for the HTTP API
-    │
-    ├── .env                      <- Variables to be exported in the dev environment e.g. `PORT=8080`
-    ├── .gitignore                <- GitHub's excellent Python .gitignore customized for this project
-    └── .pylintrc                 <- Configuration file for pylint
+    └── serve                     <- HTTP API for serving predictions
+        ├── Dockerfile            <- Dockerfile for HTTP API
+        ├── Pipfile               <- The Pipfile for reproducing the serving environment
+        ├── app.py                <- The entry point of the HTTP API
+        └── tests
+            ├── fixtures          <- Where to put example inputs and outputs
+            │   ├── input.json    <- Test input data
+            │   └── output.json   <- Test output data
+            └── test_app.py       <- Integration tests for the HTTP API
+
+
 
 
 [Cookiecutter]: https://github.com/audreyr/cookiecutter
