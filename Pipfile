@@ -8,6 +8,7 @@ black = "==19.10b0"
 isort = "*"
 autoflake = "*"
 pylint = "*"
+pre-commit = "*"
 
 [packages]
 cookiecutter = "*"
