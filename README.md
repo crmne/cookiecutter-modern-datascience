@@ -11,8 +11,7 @@
 * Batteries included: [Pandas], [numpy], [scipy], [seaborn], and [jupyterlab] already installed.
 * Consistent code quality: [black], [isort], [autoflake], and [pylint] already installed and set up as a git hook.
 * [Pytest] for testing.
-* [GitHub Pages] for documentation.
-* [Git LFS] for large files.
+* [GitHub Pages] for the public website.
 
 ## Quickstart
 
