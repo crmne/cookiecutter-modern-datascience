@@ -16,7 +16,6 @@ numpy = "*"
 scipy = "*"
 seaborn = "*"
 jupyterlab = "*"
-jupyterlab_code_formatter = "*"
 
 [requires]
 python_version = "3"

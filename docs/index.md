@@ -5,7 +5,7 @@
 
 * [Pipenv] for managing packages and virtualenvs in a modern way.
 * [Prefect] for modern pipelines and data workflow.
-* [Weights and Biases]/[MLFlow] for experiment tracking.
+* [Weights and Biases] for experiment tracking.
 * [FastAPI] for self-documenting fast HTTP APIs - on par with NodeJS and Go - based on [asyncio], [ASGI], and [uvicorn].
 * Modern CLI with [Typer].
 * Batteries included: [Pandas], [numpy], [scipy], [seaborn], and [jupyterlab] already installed.
@@ -15,13 +15,22 @@
 
 ## Quickstart
 
-Install the latest Cookiecutter:
+Install the latest Cookiecutter and Pipenv:
 
     pip install -U pipenv cookiecutter
 
 Generate the project structure:
 
     cookiecutter gh:crmne/cookiecutter-modern-datascience
+
+Initialize working environment:
+
+    cd <repo_name>
+    pipenv shell  # activates virtualenv
+
+Start working:
+
+    jupyter-lab
 
 ## Directory structure
 
