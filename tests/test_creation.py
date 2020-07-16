@@ -20,6 +20,7 @@ FOLDERS = [
     Path("output", "features"),
     Path("output", "models"),
     Path("output", "reports"),
+    Path("output", "reports", "figures"),
     Path("pipelines"),
     Path("pipelines", "project_name"),
     Path("pipelines", "tests"),
