@@ -128,11 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Binary folders
-/data/*/*
-/output/*/*
-!/data/*/README.md
-!/output/*/README.md
-
 # Weights & Biases
 /wandb
+
+# Dask
+dask-worker-space
