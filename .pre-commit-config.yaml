@@ -26,7 +26,10 @@ repos:
         rev: master
         hooks:
         -   id: isort
+            args:
+              - --profile
+              - black
     -   repo: https://github.com/ambv/black
         rev: stable
         hooks:
-        - id: black
+        -   id: black
