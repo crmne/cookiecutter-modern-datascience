@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
     -   repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: master
+        rev: v4.4.0
         hooks:
         -   id: trailing-whitespace
         -   id: end-of-file-fixer
@@ -13,7 +13,7 @@ repos:
         -   id: check-merge-conflict
         -   id: check-added-large-files
     -   repo: https://github.com/myint/autoflake
-        rev: master
+        rev: v2.2.0
         hooks:
         -   id: autoflake
             args:
@@ -23,13 +23,13 @@ repos:
               - --remove-all-unused-imports
               - --expand-star-imports
     -   repo: https://github.com/PyCQA/isort
-        rev: master
+        rev: 5.12.0
         hooks:
         -   id: isort
             args:
               - --profile
               - black
     -   repo: https://github.com/ambv/black
-        rev: stable
+        rev: 23.7.0
         hooks:
         -   id: black
