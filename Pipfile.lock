@@ -346,11 +346,12 @@
         },
         "filelock": {
             "hashes": [
-                "sha256:37def7b658813cda163b56fc564cdc75e86d338246458c4c28ae84cabefa2404",
-                "sha256:3a0fd85166ad9dbab54c9aec96737b744106dc5f15c0b09a6744a445299fcf04"
+                "sha256:18c57ee915c7ec61cff0ecf7f0f869936c7c30191bb0cf406f1341778d0834e1",
+                "sha256:4b0dda527ee31078689fc205ec4f1c1bf7d56cf88b6dc9426c4f230e46c2dce1"
             ],
-            "markers": "python_version >= '3.7'",
-            "version": "==3.7.1"
+            "index": "pypi",
+            "markers": "python_version >= '3.10'",
+            "version": "==3.20.3"
         },
         "identify": {
             "hashes": [
