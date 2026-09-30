@@ -1,6 +1,12 @@
 # Cookiecutter Modern Data Science
 [Cookiecutter] template for starting a Data Science project with modern, fast Python tools.
 
+> **This project is archived and no longer maintained.** It was built in 2020 and its tools (Pipenv, Prefect 1, black, W&B) have since been replaced by simpler ones.
+>
+> For a maintained template, use [cookiecutter-data-science](https://github.com/drivendataorg/cookiecutter-data-science) (`uvx --from cookiecutter-data-science ccds`). Or ask your coding agent for a project built on today's stack: [uv] for packages and Python versions, [Ruff] for linting and formatting, [marimo] for notebooks that are plain Python files, [Polars] and [DuckDB] for data, Parquet files in `data/`, and a `justfile` for running the steps.
+>
+> Thanks to everyone who starred, forked, and used it.
+
 ## Features
 
 * [Pipenv] for managing packages and virtualenvs in a modern way.
@@ -90,9 +96,6 @@ This is our your new project will look like:
             │   └── output.json   <- Test output data
             └── test_app.py       <- Integration tests for the HTTP API
 
-
-
-
 [Cookiecutter]: https://github.com/audreyr/cookiecutter
 [Pipenv]: https://pipenv.pypa.io/en/latest/
 [Prefect]: https://docs.prefect.io/
@@ -115,3 +118,8 @@ This is our your new project will look like:
 [Pytest]: https://docs.pytest.org/en/latest/
 [GitHub Pages]: https://pages.github.com/
 [Git LFS]: https://git-lfs.github.com/
+[uv]: https://docs.astral.sh/uv/
+[Ruff]: https://docs.astral.sh/ruff/
+[marimo]: https://marimo.io/
+[Polars]: https://pola.rs/
+[DuckDB]: https://duckdb.org/
